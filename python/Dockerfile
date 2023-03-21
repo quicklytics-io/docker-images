@@ -4,10 +4,11 @@ FROM python:${BASE_IMG_VERSION}
 ENV APP_DIR=/app APP_USERNAME=python
 ENV PYTHONUNBUFFERED=1 PYTHONHASHSEED=1 DEBIAN_FRONTEND=noninteractive
 
+ARG RUNTIME_PACKAGES="tini libpq5"
 # Install system dependencies
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install --no-install-recommends -y tini && \
+    apt-get install --no-install-recommends -y ${RUNTIME_PACKAGES} && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

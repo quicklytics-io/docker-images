@@ -7,7 +7,7 @@ ENV APP_DIR=/app APP_USERNAME=app
 RUN addgroup -g 1000 -S ${APP_USERNAME} && \
     adduser -u 1000 -S ${APP_USERNAME} -G ${APP_USERNAME} -s /bin/bash
 
-ARG RUNTIME_PACKAGES="tini"
+ARG RUNTIME_PACKAGES="tini postgresql-client"
 
 # install runtime dependencies
 # hadolint ignore=DL3018

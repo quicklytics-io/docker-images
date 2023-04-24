@@ -16,4 +16,4 @@ RUN apk update && \
 
 WORKDIR ${APP_DIR}
 
-ENTRYPOINT ["/usr/bin/tini", "--"]
+ENTRYPOINT ["tini", "--"]

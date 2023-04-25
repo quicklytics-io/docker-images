@@ -9,4 +9,6 @@ RUN apk update && \
     gem install pgslice -v ${TOOL_VERSION} && \
     apk del build-dependencies
 
+USER app
+
 ENTRYPOINT ["tini", "--", "pgslice"]

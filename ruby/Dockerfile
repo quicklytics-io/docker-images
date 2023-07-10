@@ -7,7 +7,7 @@ ENV APP_DIR=/app APP_USERNAME=app
 
 # create app user
 RUN groupadd -g 1000 ${APP_USERNAME} && \
-    useradd -r -u 1000 -g ${APP_USERNAME} ${APP_USERNAME}
+    useradd -u 1000 -g ${APP_USERNAME} ${APP_USERNAME}
 
 # install runtime dependencies
 # hadolint ignore=DL3018

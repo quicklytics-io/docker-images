@@ -2,7 +2,7 @@ ARG UBUNTU_VERSION=23.04
 
 FROM ubuntu:${UBUNTU_VERSION} as builder
 
-ARG TOOL_VERSION=2.0.4
+ARG TOOL_VERSION=3.1.0
 
 RUN apt-get update && \
   apt-get install --no-install-recommends -y wget ca-certificates && \

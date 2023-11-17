@@ -94,6 +94,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: utils/${{ matrix.name }}
+          platforms: linux/amd64,linux/arm64
           build-args: |
             TOOL_VERSION=${{ matrix.version }}
           push: true

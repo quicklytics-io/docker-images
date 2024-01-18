@@ -11,6 +11,7 @@ jobs:
         lang_and_version:
           - python|3.11.2-slim-bullseye
           - ruby|3.2.3-slim
+          - ruby|3.3.0-slim
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

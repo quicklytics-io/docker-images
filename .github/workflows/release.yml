@@ -6,8 +6,8 @@ on:
 
 jobs:
   base-images:
-    fail-fast: false
     strategy:
+      fail-fast: false
       matrix:
         lang_and_version:
           - python|3.11.2-slim-bullseye

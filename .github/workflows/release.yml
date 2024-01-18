@@ -6,6 +6,7 @@ on:
 
 jobs:
   base-images:
+    fail-fast: false
     strategy:
       matrix:
         lang_and_version:

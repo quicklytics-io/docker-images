@@ -52,8 +52,8 @@ jobs:
             BASE_IMG_VERSION=${{ steps.split.outputs._1 }}
           context: ${{ steps.split.outputs._0 }}
           push: true
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=gha,scope=${{ matrix.lang_and_version }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.lang_and_version }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
@@ -101,7 +101,7 @@ jobs:
           build-args: |
             TOOL_VERSION=${{ matrix.version }}
           push: true
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-from: type=gha,scope=${{ matrix.name }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.name }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

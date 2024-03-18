@@ -13,7 +13,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -g 1000 ${APP_USERNAME} && \
-    useradd -r -u 1000 -g python ${APP_USERNAME}
+    useradd -r -u 1000 -d ${APP_DIR} -g python ${APP_USERNAME}
 
 WORKDIR ${APP_DIR}
 

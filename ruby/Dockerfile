@@ -11,7 +11,7 @@ ENV RUBY_YJIT_ENABLE=1
 
 # create app user
 RUN groupadd -g 1000 ${APP_USERNAME} && \
-    adduser --uid 1000 --gid 1000 ${APP_USERNAME}
+    adduser --uid 1000 --home ${APP_DIR} --gid 1000 ${APP_USERNAME}
 
 # install runtime dependencies
 # hadolint ignore=DL3018

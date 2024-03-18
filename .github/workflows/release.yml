@@ -12,6 +12,7 @@ jobs:
       matrix:
         lang_and_version:
           - python|3.11.2-slim-bullseye
+          - python|3.12.2-slim-bookworm
           - ruby|3.2.3-slim
           - ruby|3.3.0-slim
     runs-on: ubuntu-latest

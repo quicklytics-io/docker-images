@@ -47,7 +47,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           build-args: |
             BASE_IMG_VERSION=${{ steps.split.outputs._1 }}
@@ -95,7 +95,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: utils/${{ matrix.name }}
           platforms: linux/amd64,linux/arm64

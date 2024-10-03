@@ -70,7 +70,7 @@ jobs:
           - name: pgslice
             version: 0.6.1
           - name: odbc2parquet
-            version: 5.1.2
+            version: 6.1.1
     steps:
       - uses: actions/checkout@v4
       - uses: hadolint/hadolint-action@v3.1.0

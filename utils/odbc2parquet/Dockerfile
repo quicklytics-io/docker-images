@@ -10,7 +10,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # Download extract and move to PATH somewhere
-RUN wget --progress=dot:giga https://github.com/pacman82/odbc2parquet/releases/download/v${TOOL_VERSION}/odbc2parquet-x86_64-ubuntu.gz -O /tmp.odbc2parquet.gz && \
+RUN wget --progress=dot:giga https://github.com/pacman82/odbc2parquet/releases/download/v${TOOL_VERSION}/odbc2parquet-ubuntu-x86_64.gz -O /tmp.odbc2parquet.gz && \
   gunzip /tmp.odbc2parquet.gz && \
   mv /tmp.odbc2parquet /usr/local/bin/odbc2parquet && \
   rm -rf "/tmp/*"

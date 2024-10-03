@@ -1,8 +1,10 @@
-ARG UBUNTU_VERSION=23.04
+ARG UBUNTU_VERSION=24.04
 
 FROM ubuntu:${UBUNTU_VERSION} as builder
 
-ARG TOOL_VERSION=3.1.0
+ENV DEBIAN_FRONTEND=noninteractive
+
+ARG TOOL_VERSION=6.1.1
 
 RUN apt-get update && \
   apt-get install --no-install-recommends -y wget ca-certificates && \
@@ -16,6 +18,8 @@ RUN wget --progress=dot:giga https://github.com/pacman82/odbc2parquet/releases/d
   rm -rf "/tmp/*"
 
 FROM ubuntu:${UBUNTU_VERSION}
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 COPY --from=builder /usr/local/bin/odbc2parquet /usr/local/bin/odbc2parquet
 

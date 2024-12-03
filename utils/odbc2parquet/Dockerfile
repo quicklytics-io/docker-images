@@ -4,7 +4,7 @@ FROM ubuntu:${UBUNTU_VERSION} as builder
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ARG TOOL_VERSION=6.1.1
+ARG TOOL_VERSION=6.3.1
 
 RUN apt-get update && \
   apt-get install --no-install-recommends -y wget ca-certificates && \

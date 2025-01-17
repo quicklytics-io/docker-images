@@ -13,7 +13,7 @@ jobs:
         lang_and_version:
           - python|3.12.7-slim-bookworm
           - ruby|3.2.5-slim
-          - ruby|3.3.6-slim
+          - ruby|3.3.7-slim
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

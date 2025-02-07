@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         lang_and_version:
-          - python|3.12.7-slim-bookworm
+          - python|3.12.9-slim-bookworm
           - ruby|3.2.5-slim
           - ruby|3.3.7-slim
     runs-on: ubuntu-latest

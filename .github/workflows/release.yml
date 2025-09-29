@@ -23,7 +23,7 @@ jobs:
           separator: '|'
           maxsplit: 1
           msg: ${{ matrix.lang_and_version }}
-      - uses: hadolint/hadolint-action@v3.1.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: ${{ steps.split.outputs._0 }}/Dockerfile
           ignore: DL3008
@@ -69,7 +69,7 @@ jobs:
             version: 6.3.1
     steps:
       - uses: actions/checkout@v4
-      - uses: hadolint/hadolint-action@v3.1.0
+      - uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: utils/${{ matrix.name }}/Dockerfile
           ignore: DL3008

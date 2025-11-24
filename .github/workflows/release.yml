@@ -16,7 +16,7 @@ jobs:
           - ruby|3.3.8-slim
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: jungwinter/split@v2
         id: split
         with:
@@ -68,7 +68,7 @@ jobs:
           - name: odbc2parquet
             version: 6.3.1
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: utils/${{ matrix.name }}/Dockerfile
